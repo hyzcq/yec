@@ -82,7 +82,7 @@
     color: #333;
     background-color: #f5f5f5;
 
-    /* 其他 */ 
+    /* others */ 
     opacity: 1;
 }
 ```
