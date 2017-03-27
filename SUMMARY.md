@@ -1,6 +1,6 @@
 # Summary
 
-* [编码规范](HTML编码规范)
+* [编码规范](chapter1/htmlbian-ma-gui-fan.md)
     * [HTML编码规范](chapter1/htmlbian-ma-gui-fan.md)
     * [CSS编码规范](chapter1/cssbian-ma-gui-fan.md)
     * [JS编码规范](README.md)
