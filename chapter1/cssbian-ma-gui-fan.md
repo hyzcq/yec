@@ -6,6 +6,7 @@
 * 每个属性声明末尾都要加分号 。
 
 * 声明块的右花括号应当单独成行。
+
 * 每条声明语句的 `:` 后应该插入一个空格。
 * 为了获得更准确的错误报告，每条声明都应该独占一行。
 
@@ -26,6 +27,37 @@
   margin-bottom: 15px;
   background-color: rgba(0,0,0,.5);
   box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
+}
+```
+
+### reset.css
+
+重置浏览器默认样式常用reset.css
+
+```
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,th,td{margin:0;padding:0}
+img,iframe{border:0;}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
+ol,ul{list-style:none outside none}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bold}
+em,strong{font-style:normal;font-weight:bold}
+body,textarea,select,input{color:#000;font:"Helvetica Neue", Helvetica, STHeiTi, "Microsoft Yahei", sans-serif;}
+a,button{cursor:pointer;text-decoration:none;}
+/* 默认 */
+/*input 去掉ie10以上版本的X*/
+::-ms-clear, ::-ms-reveal{display:none;}
+/*input 去掉chrome选中input时的外边框*/
+input{outline:none;border:0;}
+body,div,ul,li,a{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{	color: #fff;
+	text-decoration: none;
+	display: inline-block;
 }
 ```
 
@@ -147,111 +179,109 @@ span { ... }
 .tweet .avatar { ... }
 ```
 
-### 常用的CSS命名规则 
+### 常用的CSS命名规则
 
 **\(1\)页面结构**
 
- 容器: container
+容器: container
 
- 页头：header
+页头：header
 
- 内容：content\/container
+内容：content\/container
 
- 页面主体：main
+页面主体：main
 
- 页尾：footer
+页尾：footer
 
- 导航：nav
+导航：nav
 
- 侧栏：sidebar
+侧栏：sidebar
 
- 栏目：column
+栏目：column
 
- 页面外围控制整体佈局宽度：wrapper
+页面外围控制整体佈局宽度：wrapper
 
- 左右中：left right center
+左右中：left right center
 
 **\(2\)导航**
 
- 导航：nav
+导航：nav
 
- 主导航：mainnav
+主导航：mainnav
 
- 子导航：subnav
+子导航：subnav
 
- 顶导航：topnav
+顶导航：topnav
 
- 边导航：sidebar
+边导航：sidebar
 
- 左导航：leftsidebar
+左导航：leftsidebar
 
- 右导航：rightsidebar
+右导航：rightsidebar
 
- 菜单：menu
+菜单：menu
 
- 子菜单：submenu
+子菜单：submenu
 
- 标题: title
+标题: title
 
- 摘要: summary
+摘要: summary
 
 **\(3\)功能**
 
- 标志：logo
+标志：logo
 
- 广告：banner
+广告：banner
 
- 登陆：login
+登陆：login
 
- 登录条：loginbar
+登录条：loginbar
 
- 注册：register
+注册：register
 
- 搜索：search
+搜索：search
 
- 功能区：shop
+功能区：shop
 
- 标题：title
+标题：title
 
- 加入：joinus
+加入：joinus
 
- 状态：status
+状态：status
 
- 按钮：btn
+按钮：btn
 
- 滚动：scroll
+滚动：scroll
 
- 标籤页：tab
+标籤页：tab
 
- 文章列表：list
+文章列表：list
 
- 提示信息：msg
+提示信息：msg
 
- 当前的: current
+当前的: current
 
- 小技巧：tips
+小技巧：tips
 
- 图标: icon
+图标: icon
 
- 注释：note
+注释：note
 
- 指南：guild
+指南：guild
 
- 服务：service
+服务：service
 
- 热点：hot
+热点：hot
 
- 新闻：news
+新闻：news
 
- 下载：download
+下载：download
 
- 投票：vote
+投票：vote
 
- 合作伙伴：partner
+合作伙伴：partner
 
- 友情链接：link
+友情链接：link
 
- 版权：copyright
-
-
+版权：copyright
 
