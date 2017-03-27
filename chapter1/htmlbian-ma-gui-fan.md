@@ -71,31 +71,6 @@
 </html>
 ```
 
-### 属性顺序
-
-属性应该按照特定的顺序出现以保证易读性；
-
-* `class`
-* `id`
-* `name`
-* `data-*`
-* `src`, `for`, `type`, `href`, `value` , `max-length`, `max`, `min`, `pattern`
-* `placeholder`, `title`, `alt`
-* `aria-*`, `role`
-* `required`, `readonly`, `disabled`
-
-class是为高可复用组件设计的，所以应处在第一位；
-
-id更加具体且应该尽量少使用，所以将它放在第二位。
-
-```
-<a class="..." id="..." data-modal="toggle" href="#">Example link</a>
-
-<input class="form-control" type="text">
-
-<img src="..." alt="...">
-```
-
 ### JS生成标签
 
 在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
