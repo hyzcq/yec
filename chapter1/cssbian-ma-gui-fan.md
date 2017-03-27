@@ -1,4 +1,4 @@
-## **CSS编码规范**
+## CSS编码规范
 
 ### 语法
 
@@ -8,6 +8,7 @@
 * 声明块的右花括号应当单独成行。
 
 * 每条声明语句的 `:` 后应该插入一个空格。
+
 * 为了获得更准确的错误报告，每条声明都应该独占一行。
 
 ```
@@ -49,15 +50,15 @@ a,button{cursor:pointer;text-decoration:none;}
 /*input 去掉chrome选中input时的外边框*/
 input{outline:none;border:0;}
 body,div,ul,li,a{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 li{
-	list-style: none;
+    list-style: none;
 }
-a{	color: #fff;
-	text-decoration: none;
-	display: inline-block;
+a{    color: #fff;
+    text-decoration: none;
+    display: inline-block;
 }
 ```
 
