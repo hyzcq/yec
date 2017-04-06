@@ -8,4 +8,6 @@
 * [学习资源](工具篇.md)
   * [工具篇](工具篇.md)
   * [vue资源](vuezi-yuan.md)
+  * [CSS资源](csszi-yuan.md)
+  * [小程序资源](xiao-cheng-xu-zi-yuan.md)
 
