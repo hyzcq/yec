@@ -7,4 +7,5 @@
   * [js编码规范](chapter1/jsbian-ma-gui-fan.md)
 * [学习资源](工具篇.md)
   * [工具篇](工具篇.md)
+  * [vue资源](vuezi-yuan.md)
 
