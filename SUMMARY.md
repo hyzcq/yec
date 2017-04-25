@@ -10,4 +10,5 @@
   * [vue资源](vuezi-yuan.md)
   * [CSS资源](csszi-yuan.md)
   * [小程序资源](xiao-cheng-xu-zi-yuan.md)
+  * [js学习资源](jsxue-xi-zi-yuan.md)
 
