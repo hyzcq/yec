@@ -1,8 +1,6 @@
-### Vue项目Eslint风格
+### Eslint风格
 
 // https://eslint.org/docs/user-guide/configuring
-
-
 
 module.exports = {
 
@@ -40,49 +38,49 @@ module.exports = {
 
     // allow debugger during development
 
-    'no-debugger': process.env.NODE\_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE\_ENV === 'production' ? 2 : 'off',
 
     // tab 缩进
 
-    'indent': \['error', 'tab'\],
+    'indent': \[2, 4\],
 
-    'no-mixed-spaces-and-tabs': 'error',
+    'no-mixed-spaces-and-tabs': 2,
 
     // 使用单引号
 
-    'quotes': \['error', 'single'\],
+    'quotes': \[2, 'single'\],
 
     // 控制逗号前后的空格
 
-    "comma-spacing": \[2, { "before": false, "after": true }\],
+    'comma-spacing': \[2, { 'before': false, 'after': true }\],
 
-    "key-spacing": 2, // 对象key之后，冒号前不允许有空格; value前需要有空格
+    'key-spacing': 2, // 对象key之后，冒号前不允许有空格; value前需要有空格
 
-    "keyword-spacing": 0, //要求在关键字之前、之后都至少有一个空格
+    'keyword-spacing': 0, //要求在关键字之前、之后都至少有一个空格
 
-    "no-multiple-empty-lines": \[2, {"max": 2}\], // 不能有多个空行,最多两行
+    'no-multiple-empty-lines': \[2, {'max': 2}\], // 不能有多个空行,最多两行
 
-    "no-trailing-spaces": 2, // 行尾不留空格
+    'no-trailing-spaces': 2, // 行尾不留空格
 
-    "quote-props": \[2, "consistent"\], //对象的属性名需要统一【 双引号、单引号、不加】三个选一
+    'quote-props': \[2, 'consistent'\], //对象的属性名需要统一【 双引号、单引号、不加】三个选一
 
-    "spaced-comment": \[2, "always"\], // 注释后面//后需要增加空格
+    'spaced-comment': \[1, 'always'\], // 注释后面//后需要增加空格
 
     // 强制一行的最大长度
 
-    "max-len":\[1,200\],
+    'max-len':\[1, 100\],
 
     // 禁止不必要的分号
 
-    "no-extra-semi": 2,
+    'no-extra-semi': 2,
 
     // 禁止与负零进行比较
 
-    'no-compare-neg-zero': 'error',
+    'no-compare-neg-zero': 2,
 
     // 禁止在函数参数中出现重复名称的参数
 
-    'no-dupe-args': 'error',
+    'no-dupe-args': 2,
 
     'vue/no-parsing-error': \[2, { 'x-invalid-end-tag': false }\],
 
@@ -94,55 +92,19 @@ module.exports = {
 
     // 计算属性禁止包含异步方法
 
-    'vue/no-async-in-computed-properties': 'error',
+    'vue/no-async-in-computed-properties': 2,
 
     // 禁止出现难以理解的 v-if 和 v-for
 
-    'vue/no-confusing-v-for-v-if': 'error',
+    'vue/no-confusing-v-for-v-if': 2,
 
     // 禁止出现重复的属性
 
-    'vue/no-duplicate-attributes': 'error',
+    'vue/no-duplicate-attributes': 2,
 
     // 禁止覆盖保留字
 
-    'vue/no-reserved-keys': 'error',
-
-    // v-for 指令必须合法
-
-    'vue/valid-v-for': 'error',
-
-    // v-html 指令必须合法
-
-    'vue/valid-v-html': 'error',
-
-    // v-if 指令必须合法
-
-    'vue/valid-v-if': 'error',
-
-    // v-model 指令必须合法
-
-    'vue/valid-v-model': 'error',
-
-    // v-on 指令必须合法
-
-    'vue/valid-v-on': 'error',
-
-    // v-once 指令必须合法
-
-    'vue/valid-v-once': 'error',
-
-    // v-pre 指令必须合法
-
-    'vue/valid-v-pre': 'error',
-
-    // v-show 指令必须合法
-
-    'vue/valid-v-show': 'error',
-
-    // v-text 指令必须合法
-
-    'vue/valid-v-text': 'error',
+    'vue/no-reserved-keys': 2
 
   }
 
@@ -154,969 +116,967 @@ module.exports = {
 
 "rules": {
 
+```
+////////////////
 
+// 可能的错误  //
 
-    ////////////////
+////////////////
 
-    // 可能的错误  //
 
-    ////////////////
 
+// 禁止条件表达式中出现赋值操作符
 
+"no-cond-assign": 2,
 
-    // 禁止条件表达式中出现赋值操作符
+// 禁用 console
 
-    "no-cond-assign": 2,
+"no-console": 0,
 
-    // 禁用 console
+// 禁止在条件中使用常量表达式
 
-    "no-console": 0,
+// if \(false\) {
 
-    // 禁止在条件中使用常量表达式
+//     doSomethingUnfinished\(\);
 
-    // if \(false\) {
+// } //cuowu
 
-    //     doSomethingUnfinished\(\);
+"no-constant-condition": 2,
 
-    // } //cuowu
+// 禁止在正则表达式中使用控制字符 ：new RegExp\("\x1f"\)
 
-    "no-constant-condition": 2,
+"no-control-regex": 2,
 
-    // 禁止在正则表达式中使用控制字符 ：new RegExp\("\x1f"\)
+// 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，
 
-    "no-control-regex": 2,
+// always-multiline：多行模式必须带逗号，单行模式不能带逗号
 
-    // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，
+"comma-dangle": \[1, "always-multiline"\],
 
-    // always-multiline：多行模式必须带逗号，单行模式不能带逗号
+// 禁用 debugger
 
-    "comma-dangle": \[1, "always-multiline"\],
+"no-debugger": 2,
 
-    // 禁用 debugger
+// 禁止 function 定义中出现重名参数
 
-    "no-debugger": 2,
+"no-dupe-args": 2,
 
-    // 禁止 function 定义中出现重名参数
+// 禁止对象字面量中出现重复的 key
 
-    "no-dupe-args": 2,
+"no-dupe-keys": 2,
 
-    // 禁止对象字面量中出现重复的 key
+// 禁止重复的 case 标签
 
-    "no-dupe-keys": 2,
+"no-duplicate-case": 2,
 
-    // 禁止重复的 case 标签
+// 禁止空语句块
 
-    "no-duplicate-case": 2,
+"no-empty": 2,
 
-    // 禁止空语句块
+// 禁止在正则表达式中使用空字符集 \(/^abc\[\]/\)
 
-    "no-empty": 2,
+"no-empty-character-class": 2,
 
-    // 禁止在正则表达式中使用空字符集 \(/^abc\[\]/\)
+// 禁止对 catch 子句的参数重新赋值
 
-    "no-empty-character-class": 2,
+"no-ex-assign": 2,
 
-    // 禁止对 catch 子句的参数重新赋值
+// 禁止不必要的布尔转换
 
-    "no-ex-assign": 2,
+"no-extra-boolean-cast": 2,
 
-    // 禁止不必要的布尔转换
+//  禁止不必要的括号 //\(a \* b\) + c;//报错
 
-    "no-extra-boolean-cast": 2,
+"no-extra-parens": 0,
 
-    //  禁止不必要的括号 //\(a \* b\) + c;//报错
+// 禁止不必要的分号
 
-    "no-extra-parens": 0,
+"no-extra-semi": 2,
 
-    // 禁止不必要的分号
+// 禁止对 function 声明重新赋值
 
-    "no-extra-semi": 2,
+"no-func-assign": 2,
 
-    // 禁止对 function 声明重新赋值
+//  禁止在嵌套的块中出现 function 或 var 声明
 
-    "no-func-assign": 2,
+"no-inner-declarations": \[2, "functions"\],
 
-    //  禁止在嵌套的块中出现 function 或 var 声明
+// 禁止 RegExp 构造函数中无效的正则表达式字符串
 
-    "no-inner-declarations": \[2, "functions"\],
+"no-invalid-regexp": 2,
 
-    // 禁止 RegExp 构造函数中无效的正则表达式字符串
+// 禁止在字符串和注释之外不规则的空白
 
-    "no-invalid-regexp": 2,
+"no-irregular-whitespace": 2,
 
-    // 禁止在字符串和注释之外不规则的空白
+// 禁止在 in 表达式中出现否定的左操作数
 
-    "no-irregular-whitespace": 2,
+"no-negated-in-lhs": 2,
 
-    // 禁止在 in 表达式中出现否定的左操作数
+//   禁止把全局对象 \(Math 和 JSON\) 作为函数调用  错误：var math = Math\(\);
 
-    "no-negated-in-lhs": 2,
+"no-obj-calls": 2,
 
-    //   禁止把全局对象 \(Math 和 JSON\) 作为函数调用  错误：var math = Math\(\);
+// 禁止直接使用 Object.prototypes 的内置属性
 
-    "no-obj-calls": 2,
+"no-prototype-builtins":0,
 
-    // 禁止直接使用 Object.prototypes 的内置属性
+// 禁止正则表达式字面量中出现多个空格
 
-    "no-prototype-builtins":0,
+"no-regex-spaces": 2,
 
-    // 禁止正则表达式字面量中出现多个空格
+// 禁用稀疏数组
 
-    "no-regex-spaces": 2,
+"no-sparse-arrays": 2,
 
-    // 禁用稀疏数组
+// 禁止出现令人困惑的多行表达式
 
-    "no-sparse-arrays": 2,
+"no-unexpected-multiline": 2,
 
-    // 禁止出现令人困惑的多行表达式
+// 禁止在return、throw、continue 和 break语句之后出现不可达代码
 
-    "no-unexpected-multiline": 2,
+/\*
 
-    // 禁止在return、throw、continue 和 break语句之后出现不可达代码
+    function foo\(\) {
 
-    /\*
+    return true;
 
-        function foo\(\) {
+    console.log\("done"\);
 
-        return true;
+    }//错误
 
-        console.log\("done"\);
+\*/
 
-        }//错误
+"no-unreachable": 2,
 
-    \*/
+// 要求使用 isNaN\(\) 检查 NaN
 
-    "no-unreachable": 2,
+"use-isnan": 2,
 
-    // 要求使用 isNaN\(\) 检查 NaN
+// 强制使用有效的 JSDoc 注释
 
-    "use-isnan": 2,
+"valid-jsdoc": 1,
 
-    // 强制使用有效的 JSDoc 注释
+// 强制 typeof 表达式与有效的字符串进行比较
 
-    "valid-jsdoc": 1,
+// typeof foo === "undefimed" 错误
 
-    // 强制 typeof 表达式与有效的字符串进行比较
+"valid-typeof": 2,
 
-    // typeof foo === "undefimed" 错误
 
-    "valid-typeof": 2,
 
 
 
+//////////////
 
+// 最佳实践 //
 
-    //////////////
+//////////////
 
-    // 最佳实践 //
 
-    //////////////
 
+// 定义对象的set存取器属性时，强制定义get
 
+"accessor-pairs": 2,
 
-    // 定义对象的set存取器属性时，强制定义get
+// 强制数组方法的回调函数中有 return 语句
 
-    "accessor-pairs": 2,
+"array-callback-return":0,
 
-    // 强制数组方法的回调函数中有 return 语句
+// 强制把变量的使用限制在其定义的作用域范围内
 
-    "array-callback-return":0,
+"block-scoped-var": 0,
 
-    // 强制把变量的使用限制在其定义的作用域范围内
+// 限制圈复杂度，也就是类似if else能连续接多少个
 
-    "block-scoped-var": 0,
+"complexity": \[2, 9\],
 
-    // 限制圈复杂度，也就是类似if else能连续接多少个
+//  要求 return 语句要么总是指定返回的值，要么不指定
 
-    "complexity": \[2, 9\],
+"consistent-return": 0,
 
-    //  要求 return 语句要么总是指定返回的值，要么不指定
+// 强制所有控制语句使用一致的括号风格
 
-    "consistent-return": 0,
+"curly": \[2, "all"\],
 
-    // 强制所有控制语句使用一致的括号风格
+// switch 语句强制 default 分支，也可添加 // no default 注释取消此次警告
 
-    "curly": \[2, "all"\],
+"default-case": 2,
 
-    // switch 语句强制 default 分支，也可添加 // no default 注释取消此次警告
+// 强制object.key 中 . 的位置，参数:
 
-    "default-case": 2,
+//      property，'.'号应与属性在同一行
 
-    // 强制object.key 中 . 的位置，参数:
+//      object, '.' 号应与对象名在同一行
 
-    //      property，'.'号应与属性在同一行
+"dot-location": \[2, "property"\],
 
-    //      object, '.' 号应与对象名在同一行
+// 强制使用.号取属性
 
-    "dot-location": \[2, "property"\],
+//    参数： allowKeywords：true 使用保留字做属性名时，只能使用.方式取属性
 
-    // 强制使用.号取属性
+//                          false 使用保留字做属性名时, 只能使用\[\]方式取属性 e.g \[2, {"allowKeywords": false}\]
 
-    //    参数： allowKeywords：true 使用保留字做属性名时，只能使用.方式取属性
+//           allowPattern:  当属性名匹配提供的正则表达式时，允许使用\[\]方式取值,否则只能用.号取值 e.g \[2, {"allowPattern": "^\[a-z\]+\(\_\[a-z\]+\)+$"}\]
 
-    //                          false 使用保留字做属性名时, 只能使用\[\]方式取属性 e.g \[2, {"allowKeywords": false}\]
+"dot-notation": \[2, { "allowKeywords": false }\],
 
-    //           allowPattern:  当属性名匹配提供的正则表达式时，允许使用\[\]方式取值,否则只能用.号取值 e.g \[2, {"allowPattern": "^\[a-z\]+\(\_\[a-z\]+\)+$"}\]
+// 使用 === 替代 == allow-null允许null和undefined==
 
-    "dot-notation": \[2, { "allowKeywords": false }\],
+"eqeqeq": \[2, "allow-null"\],
 
-    // 使用 === 替代 == allow-null允许null和undefined==
+// 要求 for-in 循环中有一个 if 语句
 
-    "eqeqeq": \[2, "allow-null"\],
+"guard-for-in": 2,
 
-    // 要求 for-in 循环中有一个 if 语句
+// 禁用 alert、confirm 和 prompt
 
-    "guard-for-in": 2,
+"no-alert": 0,
 
-    // 禁用 alert、confirm 和 prompt
+// 禁用 arguments.caller 或 arguments.callee
 
-    "no-alert": 0,
+"no-caller": 2,
 
-    // 禁用 arguments.caller 或 arguments.callee
+// 不允许在 case 子句中使用词法声明
 
-    "no-caller": 2,
+"no-case-declarations":2,
 
-    // 不允许在 case 子句中使用词法声明
+// 禁止除法操作符显式的出现在正则表达式开始的位置
 
-    "no-case-declarations":2,
+"no-div-regex": 2,
 
-    // 禁止除法操作符显式的出现在正则表达式开始的位置
+// 禁止 if 语句中有 return 之后有 else
 
-    "no-div-regex": 2,
+"no-else-return": 0,
 
-    // 禁止 if 语句中有 return 之后有 else
+// 禁止出现空函数.如果一个函数包含了一条注释，它将不会被认为有问题。
 
-    "no-else-return": 0,
+"no-empty-function":2,
 
-    // 禁止出现空函数.如果一个函数包含了一条注释，它将不会被认为有问题。
+// 禁止使用空解构模式no-empty-pattern
 
-    "no-empty-function":2,
+"no-empty-pattern":2,
 
-    // 禁止使用空解构模式no-empty-pattern
+// 禁止在没有类型检查操作符的情况下与 null 进行比较
 
-    "no-empty-pattern":2,
+"no-eq-null": 1,
 
-    // 禁止在没有类型检查操作符的情况下与 null 进行比较
+// 禁用 eval\(\)
 
-    "no-eq-null": 1,
+"no-eval": 2,
 
-    // 禁用 eval\(\)
+// 禁止扩展原生类型
 
-    "no-eval": 2,
+"no-extend-native": 2,
 
-    // 禁止扩展原生类型
+// 禁止不必要的 .bind\(\) 调用
 
-    "no-extend-native": 2,
+"no-extra-bind": 2,
 
-    // 禁止不必要的 .bind\(\) 调用
+// 禁用不必要的标签
 
-    "no-extra-bind": 2,
+"no-extra-label:":0,
 
-    // 禁用不必要的标签
+// 禁止 case 语句落空
 
-    "no-extra-label:":0,
+"no-fallthrough": 2,
 
-    // 禁止 case 语句落空
+// 禁止数字字面量中使用前导和末尾小数点
 
-    "no-fallthrough": 2,
+"no-floating-decimal": 2,
 
-    // 禁止数字字面量中使用前导和末尾小数点
+// 禁止使用短符号进行类型转换\(!!fOO\)
 
-    "no-floating-decimal": 2,
+"no-implicit-coercion":0,
 
-    // 禁止使用短符号进行类型转换\(!!fOO\)
+// 禁止在全局范围内使用 var 和命名的 function 声明
 
-    "no-implicit-coercion":0,
+"no-implicit-globals":1,
 
-    // 禁止在全局范围内使用 var 和命名的 function 声明
+// 禁止使用类似 eval\(\) 的方法
 
-    "no-implicit-globals":1,
+"no-implied-eval": 2,
 
-    // 禁止使用类似 eval\(\) 的方法
+// 禁止 this 关键字出现在类和类对象之外
 
-    "no-implied-eval": 2,
+"no-invalid-this":0,
 
-    // 禁止 this 关键字出现在类和类对象之外
+// 禁用 \_\_iterator\_\_ 属性
 
-    "no-invalid-this":0,
+"no-iterator": 2,
 
-    // 禁用 \_\_iterator\_\_ 属性
+//  禁用标签语句
 
-    "no-iterator": 2,
+"no-labels": 2,
 
-    //  禁用标签语句
+// 禁用不必要的嵌套块
 
-    "no-labels": 2,
+"no-lone-blocks": 2,
 
-    // 禁用不必要的嵌套块
+// 禁止在循环中出现 function 声明和表达式
 
-    "no-lone-blocks": 2,
+"no-loop-func":1,
 
-    // 禁止在循环中出现 function 声明和表达式
+// 禁用魔术数字\(3.14什么的用常量代替\)
 
-    "no-loop-func":1,
+"no-magic-numbers":\[1,{ "ignore": \[0,-1,1\] }\],
 
-    // 禁用魔术数字\(3.14什么的用常量代替\)
+// 禁止使用多个空格
 
-    "no-magic-numbers":\[1,{ "ignore": \[0,-1,1\] }\],
+"no-multi-spaces": 2,
 
-    // 禁止使用多个空格
+// 禁止使用多行字符串，在 JavaScript 中，可以在新行之前使用斜线创建多行字符串
 
-    "no-multi-spaces": 2,
+"no-multi-str": 2,
 
-    // 禁止使用多行字符串，在 JavaScript 中，可以在新行之前使用斜线创建多行字符串
+// 禁止对原生对象赋值
 
-    "no-multi-str": 2,
+"no-native-reassign": 2,
 
-    // 禁止对原生对象赋值
+// 禁止在非赋值或条件语句中使用 new 操作符
 
-    "no-native-reassign": 2,
+"no-new": 2,
 
-    // 禁止在非赋值或条件语句中使用 new 操作符
+// 禁止对 Function 对象使用 new 操作符
 
-    "no-new": 2,
+"no-new-func": 0,
 
-    // 禁止对 Function 对象使用 new 操作符
+// 禁止对 String，Number 和 Boolean 使用 new 操作符
 
-    "no-new-func": 0,
+"no-new-wrappers": 2,
 
-    // 禁止对 String，Number 和 Boolean 使用 new 操作符
+// 禁用八进制字面量
 
-    "no-new-wrappers": 2,
+"no-octal": 2,
 
-    // 禁用八进制字面量
+// 禁止在字符串中使用八进制转义序列
 
-    "no-octal": 2,
+"no-octal-escape": 2,
 
-    // 禁止在字符串中使用八进制转义序列
+// 不允许对 function 的参数进行重新赋值
 
-    "no-octal-escape": 2,
+"no-param-reassign": 0,
 
-    // 不允许对 function 的参数进行重新赋值
+// 禁用 \_\_proto\_\_ 属性
 
-    "no-param-reassign": 0,
+"no-proto": 2,
 
-    // 禁用 \_\_proto\_\_ 属性
+// 禁止使用 var 多次声明同一变量
 
-    "no-proto": 2,
+"no-redeclare": 2,
 
-    // 禁止使用 var 多次声明同一变量
+// 禁用指定的通过 require 加载的模块
 
-    "no-redeclare": 2,
+"no-return-assign": 0,
 
-    // 禁用指定的通过 require 加载的模块
+// 禁止使用 javascript: url
 
-    "no-return-assign": 0,
+"no-script-url": 0,
 
-    // 禁止使用 javascript: url
+// 禁止自我赋值
 
-    "no-script-url": 0,
+"no-self-assign":2,
 
-    // 禁止自我赋值
+// 禁止自身比较
 
-    "no-self-assign":2,
+"no-self-compare": 2,
 
-    // 禁止自身比较
+// 禁用逗号操作符
 
-    "no-self-compare": 2,
+"no-sequences": 2,
 
-    // 禁用逗号操作符
+// 禁止抛出非异常字面量
 
-    "no-sequences": 2,
+"no-throw-literal": 2,
 
-    // 禁止抛出非异常字面量
+// 禁用一成不变的循环条件
 
-    "no-throw-literal": 2,
+"no-unmodified-loop-condition":2,
 
-    // 禁用一成不变的循环条件
+// 禁止出现未使用过的表达式
 
-    "no-unmodified-loop-condition":2,
+"no-unused-expressions": 0,
 
-    // 禁止出现未使用过的表达式
+// 禁用未使用过的标签
 
-    "no-unused-expressions": 0,
+"no-unused-labels":2,
 
-    // 禁用未使用过的标签
+// 禁止不必要的 .call\(\) 和 .apply\(\)
 
-    "no-unused-labels":2,
+"no-useless-call":2,
 
-    // 禁止不必要的 .call\(\) 和 .apply\(\)
+// 禁止不必要的字符串字面量或模板字面量的连接
 
-    "no-useless-call":2,
+"no-useless-concat":2,
 
-    // 禁止不必要的字符串字面量或模板字面量的连接
+// 禁用不必要的转义字符
 
-    "no-useless-concat":2,
+"no-useless-escape":0,
 
-    // 禁用不必要的转义字符
+// 禁用 void 操作符
 
-    "no-useless-escape":0,
+"no-void": 0,
 
-    // 禁用 void 操作符
+// 禁止在注释中使用特定的警告术语
 
-    "no-void": 0,
+"no-warning-comments": 0,
 
-    // 禁止在注释中使用特定的警告术语
+// 禁用 with 语句
 
-    "no-warning-comments": 0,
+"no-with": 2,
 
-    // 禁用 with 语句
+// 强制在parseInt\(\)使用基数参数
 
-    "no-with": 2,
+"radix": 2,
 
-    // 强制在parseInt\(\)使用基数参数
+// 要求所有的 var 声明出现在它们所在的作用域顶部
 
-    "radix": 2,
+"vars-on-top": 0,
 
-    // 要求所有的 var 声明出现在它们所在的作用域顶部
+// 要求 IIFE 使用括号括起来
 
-    "vars-on-top": 0,
+"wrap-iife": \[2, "any"\],
 
-    // 要求 IIFE 使用括号括起来
+// 要求或禁止 “Yoda” 条件
 
-    "wrap-iife": \[2, "any"\],
+"yoda": \[2, "never"\],
 
-    // 要求或禁止 “Yoda” 条件
+// 要求或禁止使用严格模式指令
 
-    "yoda": \[2, "never"\],
+"strict": 0,
 
-    // 要求或禁止使用严格模式指令
 
-    "strict": 0,
 
 
 
+//////////////
 
+//  变量声明 //
 
-    //////////////
+//////////////
 
-    //  变量声明 //
 
-    //////////////
 
+// 要求或禁止 var 声明中的初始化\(初值\)
 
+"init-declarations":0,
 
-    // 要求或禁止 var 声明中的初始化\(初值\)
+// 不允许 catch 子句的参数与外层作用域中的变量同名
 
-    "init-declarations":0,
+"no-catch-shadow": 0,
 
-    // 不允许 catch 子句的参数与外层作用域中的变量同名
+// 禁止删除变量
 
-    "no-catch-shadow": 0,
+"no-delete-var": 2,
 
-    // 禁止删除变量
+// 不允许标签与变量同名
 
-    "no-delete-var": 2,
+"no-label-var": 2,
 
-    // 不允许标签与变量同名
+// 禁用特定的全局变量
 
-    "no-label-var": 2,
+"no-restricted-globals":0,
 
-    // 禁用特定的全局变量
+// 禁止 var 声明 与外层作用域的变量同名
 
-    "no-restricted-globals":0,
+"no-shadow": 0,
 
-    // 禁止 var 声明 与外层作用域的变量同名
+// 禁止覆盖受限制的标识符
 
-    "no-shadow": 0,
+"no-shadow-restricted-names": 2,
 
-    // 禁止覆盖受限制的标识符
+// 禁用未声明的变量，除非它们在 /\*global \*/ 注释中被提到
 
-    "no-shadow-restricted-names": 2,
+"no-undef": 2,
 
-    // 禁用未声明的变量，除非它们在 /\*global \*/ 注释中被提到
+// 禁止将变量初始化为 undefined
 
-    "no-undef": 2,
+"no-undef-init": 2,
 
-    // 禁止将变量初始化为 undefined
+// 禁止将 undefined 作为标识符
 
-    "no-undef-init": 2,
+"no-undefined": 0,
 
-    // 禁止将 undefined 作为标识符
+// 禁止出现未使用过的变量
 
-    "no-undefined": 0,
+"no-unused-vars": \[2, { "vars": "all", "args": "none" }\],
 
-    // 禁止出现未使用过的变量
+// 不允许在变量定义之前使用它们
 
-    "no-unused-vars": \[2, { "vars": "all", "args": "none" }\],
+"no-use-before-define": 0,
 
-    // 不允许在变量定义之前使用它们
 
-    "no-use-before-define": 0,
 
+//////////////////////////
 
+// Node.js and CommonJS //
 
-    //////////////////////////
+//////////////////////////
 
-    // Node.js and CommonJS //
 
-    //////////////////////////
 
+// require return statements after callbacks
 
+"callback-return":0,
 
-    // require return statements after callbacks
+// 要求 require\(\) 出现在顶层模块作用域中
 
-    "callback-return":0,
+"global-require": 1,
 
-    // 要求 require\(\) 出现在顶层模块作用域中
+// 要求回调函数中有容错处理
 
-    "global-require": 1,
+"handle-callback-err": \[2, "^\(err\|error\)$"\],
 
-    // 要求回调函数中有容错处理
+// 禁止混合常规 var 声明和 require 调用
 
-    "handle-callback-err": \[2, "^\(err\|error\)$"\],
+"no-mixed-requires": 0,
 
-    // 禁止混合常规 var 声明和 require 调用
+// 禁止调用 require 时使用 new 操作符
 
-    "no-mixed-requires": 0,
+"no-new-require": 2,
 
-    // 禁止调用 require 时使用 new 操作符
+// 禁止对 \_\_dirname 和 \_\_filename进行字符串连接
 
-    "no-new-require": 2,
+"no-path-concat": 0,
 
-    // 禁止对 \_\_dirname 和 \_\_filename进行字符串连接
+// 禁用 process.env
 
-    "no-path-concat": 0,
+"no-process-env": 0,
 
-    // 禁用 process.env
+// 禁用 process.exit\(\)
 
-    "no-process-env": 0,
+"no-process-exit": 0,
 
-    // 禁用 process.exit\(\)
+// 禁用同步方法
 
-    "no-process-exit": 0,
+"no-sync": 0,
 
-    // 禁用同步方法
 
-    "no-sync": 0,
 
+//////////////
 
+// 风格指南  //
 
-    //////////////
+//////////////
 
-    // 风格指南  //
 
-    //////////////
 
+// 指定数组的元素之间要以空格隔开\(, 后面\)， never参数：\[ 之前和 \] 之后不能带空格，always参数：\[ 之前和 \] 之后必须带空格
 
+"array-bracket-spacing": \[2, "never"\],
 
-    // 指定数组的元素之间要以空格隔开\(, 后面\)， never参数：\[ 之前和 \] 之后不能带空格，always参数：\[ 之前和 \] 之后必须带空格
+// 禁止或强制在单行代码块中使用空格\(禁用\)
 
-    "array-bracket-spacing": \[2, "never"\],
+"block-spacing":\[1,"never"\],
 
-    // 禁止或强制在单行代码块中使用空格\(禁用\)
+//强制使用一致的缩进 第二个参数为 "tab" 时，会使用tab，
 
-    "block-spacing":\[1,"never"\],
+// if while function 后面的{必须与if在同一行，java风格。
 
-    //强制使用一致的缩进 第二个参数为 "tab" 时，会使用tab，
+"brace-style": \[2, "1tbs", { "allowSingleLine": true }\],
 
-    // if while function 后面的{必须与if在同一行，java风格。
+// 双峰驼命名格式
 
-    "brace-style": \[2, "1tbs", { "allowSingleLine": true }\],
+"camelcase": 2,
 
-    // 双峰驼命名格式
+// 控制逗号前后的空格
 
-    "camelcase": 2,
+"comma-spacing": \[2, { "before": false, "after": true }\],
 
-    // 控制逗号前后的空格
+// 控制逗号在行尾出现还是在行首出现 \(默认行尾\)
 
-    "comma-spacing": \[2, { "before": false, "after": true }\],
+// http://eslint.org/docs/rules/comma-style
 
-    // 控制逗号在行尾出现还是在行首出现 \(默认行尾\)
+"comma-style": \[2, "last"\],
 
-    // http://eslint.org/docs/rules/comma-style
+//"SwitchCase" \(默认：0\) 强制 switch 语句中的 case 子句的缩进水平
 
-    "comma-style": \[2, "last"\],
+// 以方括号取对象属性时，\[ 后面和 \] 前面是否需要空格, 可选参数 never, always
 
-    //"SwitchCase" \(默认：0\) 强制 switch 语句中的 case 子句的缩进水平
+"computed-property-spacing": \[2, "never"\],
 
-    // 以方括号取对象属性时，\[ 后面和 \] 前面是否需要空格, 可选参数 never, always
+// 用于指统一在回调函数中指向this的变量名，箭头函数中的this已经可以指向外层调用者，应该没卵用了
 
-    "computed-property-spacing": \[2, "never"\],
+// e.g \[0,"that"\] 指定只能 var that = this. that不能指向其他任何值，this也不能赋值给that以外的其他值
 
-    // 用于指统一在回调函数中指向this的变量名，箭头函数中的this已经可以指向外层调用者，应该没卵用了
+"consistent-this":  \[1,"that"\],
 
-    // e.g \[0,"that"\] 指定只能 var that = this. that不能指向其他任何值，this也不能赋值给that以外的其他值
+// 强制使用命名的 function 表达式
 
-    "consistent-this":  \[1,"that"\],
+"func-names": 0,
 
-    // 强制使用命名的 function 表达式
+// 文件末尾强制换行
 
-    "func-names": 0,
+"eol-last": 2,
 
-    // 文件末尾强制换行
+"indent": \[2, 4, { "SwitchCase": 1 }\],
 
-    "eol-last": 2,
+// 强制在对象字面量的属性中键和值之间使用一致的间距
 
-    "indent": \[2, 4, { "SwitchCase": 1 }\],
+"key-spacing": \[2, { "beforeColon": false, "afterColon": true }\],
 
-    // 强制在对象字面量的属性中键和值之间使用一致的间距
+// 强制使用一致的换行风格
 
-    "key-spacing": \[2, { "beforeColon": false, "afterColon": true }\],
+"linebreak-style": \[1,"unix"\],
 
-    // 强制使用一致的换行风格
+// 要求在注释周围有空行      \( 要求在块级注释之前有一空行\)
 
-    "linebreak-style": \[1,"unix"\],
+"lines-around-comment": \[1,{"beforeBlockComment":true}\],
 
-    // 要求在注释周围有空行      \( 要求在块级注释之前有一空行\)
+//  强制一致地使用函数声明或函数表达式，方法定义风格，参数：
 
-    "lines-around-comment": \[1,{"beforeBlockComment":true}\],
+//    declaration: 强制使用方法声明的方式，function f\(\){} e.g \[2, "declaration"\]
 
-    //  强制一致地使用函数声明或函数表达式，方法定义风格，参数：
+//    expression：强制使用方法表达式的方式，var f = function\(\) {}  e.g \[2, "expression"\]
 
-    //    declaration: 强制使用方法声明的方式，function f\(\){} e.g \[2, "declaration"\]
+//    allowArrowFunctions: declaration风格中允许箭头函数。 e.g \[2, "declaration", { "allowArrowFunctions": true }\]
 
-    //    expression：强制使用方法表达式的方式，var f = function\(\) {}  e.g \[2, "expression"\]
+"func-style": 0,
 
-    //    allowArrowFunctions: declaration风格中允许箭头函数。 e.g \[2, "declaration", { "allowArrowFunctions": true }\]
+// 强制回调函数最大嵌套深度 5层
 
-    "func-style": 0,
+"max-nested-callbacks": \[1,5\],
 
-    // 强制回调函数最大嵌套深度 5层
+// 禁止使用指定的标识符
 
-    "max-nested-callbacks": \[1,5\],
+"id-blacklist":0,
 
-    // 禁止使用指定的标识符
+// 强制标识符的最新和最大长度
 
-    "id-blacklist":0,
+"id-length":0,
 
-    // 强制标识符的最新和最大长度
+// 要求标识符匹配一个指定的正则表达式
 
-    "id-length":0,
+"id-match":0,
 
-    // 要求标识符匹配一个指定的正则表达式
+// 强制在 JSX 属性中一致地使用双引号或单引号
 
-    "id-match":0,
+"jsx-quotes":0,
 
-    // 强制在 JSX 属性中一致地使用双引号或单引号
+// 强制在关键字前后使用一致的空格 \(前后腰需要\)
 
-    "jsx-quotes":0,
+"keyword-spacing":2,
 
-    // 强制在关键字前后使用一致的空格 \(前后腰需要\)
+// 强制一行的最大长度
 
-    "keyword-spacing":2,
+"max-len":\[1,200\],
 
-    // 强制一行的最大长度
+// 强制最大行数
 
-    "max-len":\[1,200\],
+"max-lines":0,
 
-    // 强制最大行数
+// 强制 function 定义中最多允许的参数数量
 
-    "max-lines":0,
+"max-params":\[1,7\],
 
-    // 强制 function 定义中最多允许的参数数量
+// 强制 function 块最多允许的的语句数量
 
-    "max-params":\[1,7\],
+"max-statements":\[1,200\],
 
-    // 强制 function 块最多允许的的语句数量
+// 强制每一行中所允许的最大语句数量
 
-    "max-statements":\[1,200\],
+"max-statements-per-line":0,
 
-    // 强制每一行中所允许的最大语句数量
+// 要求构造函数首字母大写  （要求调用 new 操作符时有首字母大小的函数，允许调用首字母大写的函数时没有 new 操作符。）
 
-    "max-statements-per-line":0,
+"new-cap": \[2, { "newIsCap": true, "capIsNew": false }\],
 
-    // 要求构造函数首字母大写  （要求调用 new 操作符时有首字母大小的函数，允许调用首字母大写的函数时没有 new 操作符。）
+// 要求调用无参构造函数时有圆括号
 
-    "new-cap": \[2, { "newIsCap": true, "capIsNew": false }\],
+"new-parens": 2,
 
-    // 要求调用无参构造函数时有圆括号
+// 要求或禁止 var 声明语句后有一行空行
 
-    "new-parens": 2,
+"newline-after-var": 0,
 
-    // 要求或禁止 var 声明语句后有一行空行
+// 禁止使用 Array 构造函数
 
-    "newline-after-var": 0,
+"no-array-constructor": 2,
 
-    // 禁止使用 Array 构造函数
+// 禁用按位运算符
 
-    "no-array-constructor": 2,
+"no-bitwise":0,
 
-    // 禁用按位运算符
+// 要求 return 语句之前有一空行
 
-    "no-bitwise":0,
+"newline-before-return":0,
 
-    // 要求 return 语句之前有一空行
+// 要求方法链中每个调用都有一个换行符
 
-    "newline-before-return":0,
+"newline-per-chained-call":1,
 
-    // 要求方法链中每个调用都有一个换行符
+// 禁用 continue 语句
 
-    "newline-per-chained-call":1,
+"no-continue": 0,
 
-    // 禁用 continue 语句
+// 禁止在代码行后使用内联注释
 
-    "no-continue": 0,
+"no-inline-comments": 0,
 
-    // 禁止在代码行后使用内联注释
+// 禁止 if 作为唯一的语句出现在 else 语句中
 
-    "no-inline-comments": 0,
+"no-lonely-if": 0,
 
-    // 禁止 if 作为唯一的语句出现在 else 语句中
+// 禁止混合使用不同的操作符
 
-    "no-lonely-if": 0,
+"no-mixed-operators":0,
 
-    // 禁止混合使用不同的操作符
+// 不允许空格和 tab 混合缩进
 
-    "no-mixed-operators":0,
+"no-mixed-spaces-and-tabs": 2,
 
-    // 不允许空格和 tab 混合缩进
+// 不允许多个空行
 
-    "no-mixed-spaces-and-tabs": 2,
+"no-multiple-empty-lines": \[2, { "max": 2 }\],
 
-    // 不允许多个空行
+// 不允许否定的表达式
 
-    "no-multiple-empty-lines": \[2, { "max": 2 }\],
+"no-negated-condition":0,
 
-    // 不允许否定的表达式
+// 不允许使用嵌套的三元表达式
 
-    "no-negated-condition":0,
+"no-nested-ternary": 0,
 
-    // 不允许使用嵌套的三元表达式
+// 禁止使用 Object 的构造函数
 
-    "no-nested-ternary": 0,
+"no-new-object": 2,
 
-    // 禁止使用 Object 的构造函数
+// 禁止使用一元操作符 ++ 和 --
 
-    "no-new-object": 2,
+"no-plusplus":0,
 
-    // 禁止使用一元操作符 ++ 和 --
+// 禁止使用特定的语法
 
-    "no-plusplus":0,
+"no-restricted-syntax":0,
 
-    // 禁止使用特定的语法
+// 禁止 function 标识符和括号之间出现空格
 
-    "no-restricted-syntax":0,
+"no-spaced-func": 2,
 
-    // 禁止 function 标识符和括号之间出现空格
+// 不允许使用三元操作符
 
-    "no-spaced-func": 2,
+"no-ternary": 0,
 
-    // 不允许使用三元操作符
+//  禁用行尾空格
 
-    "no-ternary": 0,
+"no-trailing-spaces": 2,
 
-    //  禁用行尾空格
+// 禁止标识符中有悬空下划线\_bar
 
-    "no-trailing-spaces": 2,
+"no-underscore-dangle": 0,
 
-    // 禁止标识符中有悬空下划线\_bar
+// 禁止可以在有更简单的可替代的表达式时使用三元操作符
 
-    "no-underscore-dangle": 0,
+"no-unneeded-ternary": 2,
 
-    // 禁止可以在有更简单的可替代的表达式时使用三元操作符
+// 禁止属性前有空白
 
-    "no-unneeded-ternary": 2,
+"no-whitespace-before-property":0,
 
-    // 禁止属性前有空白
+// 强制花括号内换行符的一致性
 
-    "no-whitespace-before-property":0,
+"object-curly-newline":0,
 
-    // 强制花括号内换行符的一致性
+// 强制在花括号中使用一致的空格
 
-    "object-curly-newline":0,
+"object-curly-spacing": 0,
 
-    // 强制在花括号中使用一致的空格
+// 强制将对象的属性放在不同的行上
 
-    "object-curly-spacing": 0,
+"object-property-newline":0,
 
-    // 强制将对象的属性放在不同的行上
+// 强制函数中的变量要么一起声明要么分开声明
 
-    "object-property-newline":0,
+"one-var": \[2, { "initialized": "never" }\],
 
-    // 强制函数中的变量要么一起声明要么分开声明
+// 要求或禁止在 var 声明周围换行
 
-    "one-var": \[2, { "initialized": "never" }\],
+"one-var-declaration-per-line":0,
 
-    // 要求或禁止在 var 声明周围换行
+// 要求或禁止在可能的情况下要求使用简化的赋值操作符
 
-    "one-var-declaration-per-line":0,
+"operator-assignment": 0,
 
-    // 要求或禁止在可能的情况下要求使用简化的赋值操作符
+// 强制操作符使用一致的换行符
 
-    "operator-assignment": 0,
+"operator-linebreak": \[2, "after", { "overrides": { "?": "before", ":": "before" } }\],
 
-    // 强制操作符使用一致的换行符
+// 要求或禁止块内填充
 
-    "operator-linebreak": \[2, "after", { "overrides": { "?": "before", ":": "before" } }\],
+"padded-blocks": 0,
 
-    // 要求或禁止块内填充
+// 要求对象字面量属性名称用引号括起来
 
-    "padded-blocks": 0,
+"quote-props": 0,
 
-    // 要求对象字面量属性名称用引号括起来
+// 强制使用一致的反勾号、双引号或单引号
 
-    "quote-props": 0,
+"quotes": \[2, "single", "avoid-escape"\],
 
-    // 强制使用一致的反勾号、双引号或单引号
+// 要求使用 JSDoc 注释
 
-    "quotes": \[2, "single", "avoid-escape"\],
+"require-jsdoc":1,
 
-    // 要求使用 JSDoc 注释
+// 要求或禁止使用分号而不是 ASI（这个才是控制行尾部分号的，）
 
-    "require-jsdoc":1,
+"semi": \[2, "always"\],
 
-    // 要求或禁止使用分号而不是 ASI（这个才是控制行尾部分号的，）
+// 强制分号之前和之后使用一致的空格
 
-    "semi": \[2, "always"\],
+"semi-spacing": 0,
 
-    // 强制分号之前和之后使用一致的空格
+// 要求同一个声明块中的变量按顺序排列
 
-    "semi-spacing": 0,
+"sort-vars": 0,
 
-    // 要求同一个声明块中的变量按顺序排列
+// 强制在块之前使用一致的空格
 
-    "sort-vars": 0,
+"space-before-blocks": \[2, "always"\],
 
-    // 强制在块之前使用一致的空格
+// 强制在 function的左括号之前使用一致的空格
 
-    "space-before-blocks": \[2, "always"\],
+"space-before-function-paren": \[2, "always"\],
 
-    // 强制在 function的左括号之前使用一致的空格
+// 强制在圆括号内使用一致的空格
 
-    "space-before-function-paren": \[2, "always"\],
+"space-in-parens": \[2, "never"\],
 
-    // 强制在圆括号内使用一致的空格
+// 要求操作符周围有空格
 
-    "space-in-parens": \[2, "never"\],
+"space-infix-ops": 2,
 
-    // 要求操作符周围有空格
+// 强制在一元操作符前后使用一致的空格
 
-    "space-infix-ops": 2,
+"space-unary-ops": \[2, { "words": true, "nonwords": false }\],
 
-    // 强制在一元操作符前后使用一致的空格
+// 强制在注释中 // 或 /\* 使用一致的空格
 
-    "space-unary-ops": \[2, { "words": true, "nonwords": false }\],
+"spaced-comment": \[2, "always", { "markers": \["global", "globals", "eslint", "eslint-disable", "\*package", "!"\] }\],
 
-    // 强制在注释中 // 或 /\* 使用一致的空格
+// 要求或禁止 Unicode BOM
 
-    "spaced-comment": \[2, "always", { "markers": \["global", "globals", "eslint", "eslint-disable", "\*package", "!"\] }\],
+"unicode-bom": 0,
 
-    // 要求或禁止 Unicode BOM
+//  要求正则表达式被括号括起来
 
-    "unicode-bom": 0,
+"wrap-regex": 0,
 
-    //  要求正则表达式被括号括起来
 
-    "wrap-regex": 0,
 
+//////////////
 
+// ES6.相关 //
 
-    //////////////
+//////////////
 
-    // ES6.相关 //
 
-    //////////////
 
+// 要求箭头函数体使用大括号
 
+"arrow-body-style": 2,
 
-    // 要求箭头函数体使用大括号
+// 要求箭头函数的参数使用圆括号
 
-    "arrow-body-style": 2,
+"arrow-parens": 2,
 
-    // 要求箭头函数的参数使用圆括号
+"arrow-spacing":\[2,{ "before": true, "after": true }\],
 
-    "arrow-parens": 2,
+// 强制在子类构造函数中用super\(\)调用父类构造函数，TypeScrip的编译器也会提示
 
-    "arrow-spacing":\[2,{ "before": true, "after": true }\],
+"constructor-super": 0,
 
-    // 强制在子类构造函数中用super\(\)调用父类构造函数，TypeScrip的编译器也会提示
+// 强制 generator 函数中 \* 号周围使用一致的空格
 
-    "constructor-super": 0,
+"generator-star-spacing": \[2, { "before": true, "after": true }\],
 
-    // 强制 generator 函数中 \* 号周围使用一致的空格
+// 禁止修改类声明的变量
 
-    "generator-star-spacing": \[2, { "before": true, "after": true }\],
+"no-class-assign":2,
 
-    // 禁止修改类声明的变量
+// 不允许箭头功能，在那里他们可以混淆的比较
 
-    "no-class-assign":2,
+"no-confusing-arrow":0,
 
-    // 不允许箭头功能，在那里他们可以混淆的比较
+// 禁止修改 const 声明的变量
 
-    "no-confusing-arrow":0,
+"no-const-assign":2,
 
-    // 禁止修改 const 声明的变量
+// 禁止类成员中出现重复的名称
 
-    "no-const-assign":2,
+"no-dupe-class-members":2,
 
-    // 禁止类成员中出现重复的名称
+// 不允许复制模块的进口
 
-    "no-dupe-class-members":2,
+"no-duplicate-imports":0,
 
-    // 不允许复制模块的进口
+// 禁止 Symbol  的构造函数
 
-    "no-duplicate-imports":0,
+"no-new-symbol":2,
 
-    // 禁止 Symbol  的构造函数
+// 允许指定模块加载时的进口
 
-    "no-new-symbol":2,
+"no-restricted-imports":0,
 
-    // 允许指定模块加载时的进口
+// 禁止在构造函数中，在调用 super\(\) 之前使用 this 或 super
 
-    "no-restricted-imports":0,
+"no-this-before-super": 2,
 
-    // 禁止在构造函数中，在调用 super\(\) 之前使用 this 或 super
+// 禁止不必要的计算性能键对象的文字
 
-    "no-this-before-super": 2,
+"no-useless-computed-key":0,
 
-    // 禁止不必要的计算性能键对象的文字
+// 要求使用 let 或 const 而不是 var
 
-    "no-useless-computed-key":0,
+"no-var": 0,
 
-    // 要求使用 let 或 const 而不是 var
+// 要求或禁止对象字面量中方法和属性使用简写语法
 
-    "no-var": 0,
+"object-shorthand": 0,
 
-    // 要求或禁止对象字面量中方法和属性使用简写语法
+// 要求使用箭头函数作为回调
 
-    "object-shorthand": 0,
+"prefer-arrow-callback":0,
 
-    // 要求使用箭头函数作为回调
+// 要求使用 const 声明那些声明后不再被修改的变量
 
-    "prefer-arrow-callback":0,
+"prefer-const": 0,
 
-    // 要求使用 const 声明那些声明后不再被修改的变量
+// 要求在合适的地方使用 Reflect 方法
 
-    "prefer-const": 0,
+"prefer-reflect":0,
 
-    // 要求在合适的地方使用 Reflect 方法
+// 要求使用扩展运算符而非 .apply\(\)
 
-    "prefer-reflect":0,
+"prefer-spread":0,
 
-    // 要求使用扩展运算符而非 .apply\(\)
+// 要求使用模板字面量而非字符串连接
 
-    "prefer-spread":0,
+"prefer-template":0,
 
-    // 要求使用模板字面量而非字符串连接
+// Suggest using the rest parameters instead of arguments
 
-    "prefer-template":0,
+"prefer-rest-params":0,
 
-    // Suggest using the rest parameters instead of arguments
+// 要求generator 函数内有 yield
 
-    "prefer-rest-params":0,
+"require-yield":0,
 
-    // 要求generator 函数内有 yield
+// enforce spacing between rest and spread operators and their expressions
 
-    "require-yield":0,
+"rest-spread-spacing":0,
 
-    // enforce spacing between rest and spread operators and their expressions
+// 强制模块内的 import 排序
 
-    "rest-spread-spacing":0,
+"sort-imports":0,
 
-    // 强制模块内的 import 排序
+// 要求或禁止模板字符串中的嵌入表达式周围空格的使用
 
-    "sort-imports":0,
+"template-curly-spacing":1,
 
-    // 要求或禁止模板字符串中的嵌入表达式周围空格的使用
+// 强制在 yield\* 表达式中 \* 周围使用空格
 
-    "template-curly-spacing":1,
-
-    // 强制在 yield\* 表达式中 \* 周围使用空格
-
-    "yield-star-spacing":2
+"yield-star-spacing":2
+```
 
 }
-
-
 
