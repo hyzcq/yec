@@ -9,35 +9,35 @@
 4.文件结构
 
 ```
-    \|--- index.html    app入口文件
+    |--- index.html    app入口文件
 
-    \|--- css
+    |--- css
 
-    \|--- html    页面文件
+    |--- html    页面文件
 
-    \|--- icon   app图标
+    |--- icon   app图标
 
-    \|--- image   项目图片
+    |--- image   项目图片
 
-    \|--- launch   app启动图
+    |--- launch   app启动图
 
-    \|---res   公用资源文件
+    |---res   公用资源文件
 
-    \|---script   js文件
+    |---script   js文件
 
-          \|--- api.js  APICloud 前端框架，[文档地址](https://docs.apicloud.com/Front-end-Framework/framework-dev-guide)
+          |--- api.js  APICloud 前端框架，[文档地址](https://docs.apicloud.com/Front-end-Framework/framework-dev-guide)
 
-          \|--- common.js   封装通用js方法
+          |--- common.js   封装通用js方法
 
-          \|--- echo.js   图片懒加载js库，[文档地址](https://github.com/toddmotto/echo)
+          |--- echo.js   图片懒加载js库，[文档地址](https://github.com/toddmotto/echo)
 
-          \|--- fastclick.min.js   处理移动端点击延迟js库
+          |--- fastclick.min.js   处理移动端点击延迟js库
 
-          \|--- lib.js  引用通用js文件
+          |--- lib.js  引用通用js文件
 
-          \|--- sha1.min.js   sha1加密
+          |--- sha1.min.js   sha1加密
 
-          \|--- vue.min.js
+          |--- vue.min.js
 ```
 
 5.通用方法
@@ -72,47 +72,55 @@
 
   toast\('网络错误'\)
 
-       toast\({
+  ```
+   toast({
 
-          msg: '网络错误',
+      msg: '网络错误',
 
-          duration: 2000,
+      duration: 2000,
 
-           location: 'bottom'
+       location: 'bottom'
 
-       }\);
+   });
+  ```
 
 * addEvent\(string, function\)
 
-        监听事件，封装自api.addEventListener方法
+  ```
+    监听事件，封装自api.addEventListener方法
 
-        示例代码
+    示例代码
 
-        addEvent\('online', function\(value\){
+    addEvent('online', function(value){
 
-                 console.log\(value\)
+             console.log(value)
 
-        }\)
+    })
+  ```
 
 * sendEvent\(string, {params}\)
 
-        监听事件，封装自api.sendEvent方法
+  ```
+    监听事件，封装自api.sendEvent方法
 
-        示例代码
+    示例代码
 
-       //html页面a：
+   //html页面a：
 
-        sendEvent\('myEvent', {
+    sendEvent('myEvent', {
 
-                 name:  '张三'
+             name:  '张三'
 
-        }\)
+    })
 
-      //html页面b：
+  //html页面b：
 
-      addEvent\('myEvent', function\(value\){
+  addEvent('myEvent', function(value){
 
-                 console.log\(value\)   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
+             console.log(value)   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
 
-        }\)
+    })
+  ```
+
+
 
