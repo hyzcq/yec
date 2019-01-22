@@ -70,9 +70,9 @@
 
   示例代码
 
-  toast\('网络错误'\)
-
   ```
+   toast('网络错误')
+
    toast({
 
       msg: '网络错误',
@@ -119,7 +119,7 @@
 
              console.log(value)   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
 
-    })
+  })
   ```
 
 
