@@ -116,7 +116,7 @@
   ```
      /**
         * 打开新窗口
-        * @param {String} name 打开窗口名及对应url，url与文件名对应
+        * @param {String} name 打开窗口名及对应url，url与页面文件名对应
         * @param {Object} params 窗口传递页面参数
         * @param {Object} option openWin窗口配置参数,参考api.openWin方法参数
      */
@@ -126,7 +126,9 @@
 
 * openFrame\(string, {params}, {option}\)
 
-        打开新的frame，使用方法及参数同openWin
+  ```
+    打开新的frame，使用方法及参数同openWin
+  ```
 
 * closeWin\(string\)
 
