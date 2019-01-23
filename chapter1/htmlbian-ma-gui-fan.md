@@ -24,20 +24,22 @@
 
 ### HTML常用头部标签
 
-    <!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
-    <html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
-    <head>
-        <meta charset='utf-8'> <!-- 声明文档使用的字符编码 -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!-- 优先使用 IE 最新版本和 Chrome -->
-        <meta name="description" content="不超过150个字符" /> <!-- 页面描述 -->
-        <meta name="keywords" content=""/> <!-- 页面关键词 -->
-        <meta name="author" content="name, email@gmail.com" /> <!-- 网页作者 -->
-        <meta name="robots" content="index,follow" /> <!-- 搜索引擎抓取 -->
+```markdown
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <meta charset='utf-8'> <!-- 声明文档使用的字符编码 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta name="description" content="不超过150个字符" /> <!-- 页面描述 -->
+    <meta name="keywords" content=""/> <!-- 页面关键词 -->
+    <meta name="author" content="name, email@gmail.com" /> <!-- 网页作者 -->
+    <meta name="robots" content="index,follow" /> <!-- 搜索引擎抓取 -->
 
-        <!-- 为移动设备添加 viewport -->
-        <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
-        <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
-    </head>
+    <!-- 为移动设备添加 viewport -->
+    <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> 
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+</head>
+```
 
 如果你想要了解更多，请点击[这里](http://www.runoob.com/w3cnote/html-meta-intro.html)；
 
@@ -61,7 +63,7 @@
 
 如果你想要了解更多，请点击[这里](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)；
 
-```
+```markdown
 <!DOCTYPE html>
 <html>
     <head>
@@ -81,7 +83,7 @@
 
 很多时候，需要通过迭代和重构来使HTML变得更少。
 
-```
+```markdown
 <!-- Not well -->
 <span class="avatar">
     <img src="...">
@@ -90,4 +92,6 @@
 <!-- Better -->
 <img class="avatar" src="...">
 ```
+
+
 
