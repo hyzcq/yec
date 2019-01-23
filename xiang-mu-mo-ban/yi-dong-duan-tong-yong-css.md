@@ -1,204 +1,244 @@
-html,h1,h2,h3,h4,h5,h6,div,body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,th,td{
+`html,h1,h2,h3,h4,h5,h6,div,body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,th,td{`
 
-	margin:0;
+```
+margin:0;
 
-	padding:0;
+padding:0;
 
-	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+```
 
-}
+`}`
 
-img,iframe{border:0;}
+`img,iframe{border:0;}`
 
-table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
+`table{border-collapse:collapse;border-spacing:0;table-layout:fixed}`
 
-ol,ul{list-style:none outside none}
+`ol,ul{list-style:none outside none}`
 
-em,strong,i{font-style:normal;font-weight:bold}
+`em,strong,i{font-style:normal;font-weight:bold}`
 
+`/*input 去掉chrome选中input时的外边框*/`
 
+`input,a,button{outline:none;border:0;text-decoration:none;}`
 
-/\*input 去掉chrome选中input时的外边框\*/
+`html,body{`
 
-input,a,button{outline:none;border:0;text-decoration:none;}
+```
+-webkit-text-size-adjust: 100%;
 
-html,body{
+-webkit-user-select: none;
 
-	-webkit-text-size-adjust: 100%;
+user-select: none;
 
-    -webkit-user-select: none;
+-webkit-touch-callout: none;
 
-    user-select: none;
+-webkit-overflow-scrolling : touch;
 
-    -webkit-touch-callout: none;
+max-width: 750px;
 
-    -webkit-overflow-scrolling : touch;
+margin: 0 auto;
 
-    max-width: 750px;
+overflow-x: hidden;
+```
 
-    margin: 0 auto;
+`}`
 
-    overflow-x: hidden;
+`html{`
 
-}
+```
+font-size: calc\(100vw / 7.5\);
+```
 
-html{
+`}`
 
-	font-size: calc\(100vw / 7.5\);
+`@media screen and (max-width: 320px) {`
 
-}
+```
+html {
 
-@media screen and \(max-width: 320px\) {
-
-    html {
-
-        font-size: 42.6667px;
-
-    }
-
-}
-
-@media screen and \(min-width: 540px\) {
-
-    html {
-
-        font-size: 108px;
-
-    }
+    font-size: 42.6667px;
 
 }
+```
 
-body,div,ul,li,a,p,h4{
+`}`
 
-    font-size: .28rem;
+`@media screen and (min-width: 540px) {`
 
-}
+```
+html {
 
-\*{
-
-	-webkit-touch-callout:none;
-
-    -moz-touch-callout:none;
-
-    -ms-touch-callout:none;
-
-    touch-callout:none;
-
-	box-sizing: border-box;
+    font-size: 108px;
 
 }
+```
 
-li{
+`}`
 
-    list-style: none;
+`body,div,ul,li,a,p,h4{`
 
-}
+```
+font-size: .28rem;
+```
 
-a{
+`}`
 
-    text-decoration: none;
+`*{`
 
-    display: inline-block;
+```
+-webkit-touch-callout:none;
 
-}
+-moz-touch-callout:none;
 
-.pull-left{
+-ms-touch-callout:none;
 
-	float: left!important;
+touch-callout:none;
 
-}
+box-sizing: border-box;
+```
 
-.pull-right{
+`}`
 
-	float: right!important;
+`li{`
 
-}
+```
+list-style: none;
+```
 
-.clear:after{
+`}`
 
-	content: '';
+`a{`
 
-	display: block;
+```
+text-decoration: none;
 
-	clear: both;
+display: inline-block;
+```
 
-}
+`}`
 
-.text-ellipsis{
+`.pull-left{`
 
-	overflow: hidden;
+```
+float: left!important;
+```
 
-	text-overflow: ellipsis;
+`}`
 
-	white-space: nowrap;
+`.pull-right{`
 
-}
+```
+float: right!important;
+```
 
-.text-ellipsis2{
+`}`
 
-	overflow: hidden;
+`.clear:after{`
 
-	text-overflow: ellipsis;
+```
+content: '';
 
-	display: -webkit-box;
+display: block;
 
-	-webkit-line-clamp: 2;
+clear: both;
+```
 
-	-webkit-box-orient: vertical;
+`}`
 
-}
+`.text-ellipsis{`
 
-.text-ellipsis3{
+```
+overflow: hidden;
 
-	overflow: hidden;
+text-overflow: ellipsis;
 
-	text-overflow: ellipsis;
+white-space: nowrap;
+```
 
-	display: -webkit-box;
+`}`
 
-	-webkit-line-clamp: 3;
+`.text-ellipsis2{`
 
-	-webkit-box-orient: vertical;
+```
+overflow: hidden;
 
-}
+text-overflow: ellipsis;
 
-/\* 隐藏, 通常用来与 JS 配合 \*/
+display: -webkit-box;
 
-.hide {
+-webkit-line-clamp: 2;
 
-    display: none;
+-webkit-box-orient: vertical;
+```
 
-}
+`}`
 
-/\* 设置文本对齐方式\*/
+`.text-ellipsis3{`
 
-.text-left {
+```
+overflow: hidden;
 
-    text-align: left!important;
+text-overflow: ellipsis;
 
-}
+display: -webkit-box;
 
-.text-center {
+-webkit-line-clamp: 3;
 
-    text-align: center!important;
+-webkit-box-orient: vertical;
+```
 
-}
+`}`
 
-.text-right {
+`/* 隐藏, 通常用来与 JS 配合 */`
 
-    text-align: right!important;
+`.hide {`
 
-}
+```
+display: none;
+```
 
-.small {
+`}`
 
-    font-size: .8em;
+`/* 设置文本对齐方式*/`
 
-}
+`.text-left {`
 
-.strong {
+```
+text-align: left!important;
+```
 
-    font-size: 1.2em;
+`}`
 
-}
+`.text-center {`
+
+```
+text-align: center!important;
+```
+
+`}`
+
+`.text-right {`
+
+```
+text-align: right!important;
+```
+
+`}`
+
+`.small {`
+
+```
+font-size: .8em;
+```
+
+`}`
+
+`.strong {`
+
+```
+font-size: 1.2em;
+```
+
+`}`
 
