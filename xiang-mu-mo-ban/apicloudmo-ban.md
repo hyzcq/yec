@@ -101,18 +101,14 @@
    //html页面a：
 
     sendEvent('myEvent', {
-
-             name:  '张三'
-
+       name:  '张三'
     })
 
-  //html页面b：
-
-  addEvent('myEvent', function(value){
-
-             console.log(value)   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
-
-  })
+     //html页面b：
+   
+     addEvent('myEvent', function(value){
+        console.log(value)   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
+     })
   ```
 
 * openWin\(string, {params}, {option}\)
