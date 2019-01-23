@@ -11,10 +11,10 @@
 ```
     |--- index.html    app入口文件
 
-    |--- css
+    |--- css     页面css
 
     |--- html    页面目录
-    
+
         |--- page.html    页面html
 
     |--- icon   app图标
