@@ -13,7 +13,9 @@
 
     |--- css
 
-    |--- html    页面文件
+    |--- html    页面目录
+    
+        |--- page.html    页面html
 
     |--- icon   app图标
 
