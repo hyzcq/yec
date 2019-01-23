@@ -11,7 +11,7 @@
 
 * 为了获得更准确的错误报告，每条声明都应该独占一行。
 
-```
+```css
 /* Bad CSS */
 .selector, .selector-secondary, .selector[type=text] {
   padding:15px;
@@ -35,11 +35,11 @@
 
 重置浏览器默认样式常用reset.css
 
-```
+```css
 html,h1,h2,h3,h4,h5,h6,div,body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,input,textarea,button,th,td{
-	margin:0;
-	padding:0;
-	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+    margin:0;
+    padding:0;
+    font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
 }
 img,iframe{border:0;}
 table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
@@ -49,7 +49,7 @@ em,strong,i{font-style:normal;font-weight:bold}
 /*input 去掉chrome选中input时的外边框*/
 input,a,button{outline:none;border:0;text-decoration:none;}
 html,body{
-	-webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     -webkit-user-select: none;
     user-select: none;
     -webkit-touch-callout: none;
@@ -60,7 +60,7 @@ html,body{
 }
 /*移动端设置基础rem*/
 html{
-	font-size: calc(100vw / 7.5);
+    font-size: calc(100vw / 7.5);
 }
 @media screen and (max-width: 320px) {
     html {
@@ -82,7 +82,7 @@ html{
 * 使用有意义的名称。使用有组织的或目的明确的名称，不要使用表现形式（presentational）的名称。
 * 基于最近的父 class 或基本（base） class 作为新 class 的前缀。
 
-```
+```css
 /* Bad example */
 .t { ... }
 .red { ... }
@@ -100,7 +100,7 @@ html{
 * 使用一致的空白符将代码分隔成块，这样利于扫描较大的文档。
 * 如果使用了多个 CSS 文件，将其按照组件而非页面的形式分拆，因为页面会被重组，而组件只会被移动。
 
-```
+```css
 /*
  * Component section heading
  */
@@ -124,7 +124,7 @@ html{
 
 相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。
 
-```
+```css
 .declaration-order {
     /* Positioning */ 
     position: absolute;
@@ -160,7 +160,7 @@ html{
 
 当使用特定厂商的带有前缀的属性时，通过缩进的方式，让每个属性的值在垂直方向对齐，这样便于多行编辑。
 
-```
+```css
 /* Prefixed properties */
 .selector {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
@@ -180,7 +180,7 @@ html{
 * [Scope CSS classes with prefixes](http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
 * [Stop the cascade](http://markdotto.com/2012/03/02/stop-the-cascade/)
 
-```
+```css
 /* Bad example */
 span { ... }
 .page-container #stream .stream-item .tweet .tweet-header .username { ... }
