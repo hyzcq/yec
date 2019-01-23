@@ -122,5 +122,23 @@
   })
   ```
 
+* openWin\(string, {params}, {option}\)
+
+        /\*\*
+
+          \* 打开新窗口
+
+           \* @param {String} name 打开窗口名及对应url，url与文件名对应
+
+           \* @param {Object} params 窗口传递页面参数
+
+           \* @param {Object} option openWin窗口配置参数，参考api.openWin方法参数
+
+           \*/
+
+            示例代码
+
+             openWin\('page', { id: 1 },  {animation: {type: push}}\)
+
 
 
