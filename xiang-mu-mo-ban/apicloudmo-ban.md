@@ -48,29 +48,22 @@
 
   示例代码
 
-  $.ready\(function \(\) {
-
   ```
-    var appId = api.appId;
+    $.ready(function () {
+      var appId = api.appId;
+    })
   ```
-
-  }\)
 
 * toast\({params}\)
 
-  /\*\*
-
-  \* toast提示
-
-  \* @param {String} msg 提示文字信息
-
-  \* @param {Object} toast参数，同api.toast
-
-  \*/
-
+  ```
+   /**
+   * toast提示
+   * @param {String} msg 提示文字信息
+   * @param {Object} toast参数，同api.toast
+   */
   示例代码
 
-  ```
    toast('网络错误')
 
    toast({
@@ -125,35 +118,23 @@
 * openWin\(string, {params}, {option}\)
 
   ```
-    /**
-
-      * 打开新窗口
-
-       * @param {String} name 打开窗口名及对应url，url与文件名对应
-
-       * @param {Object} params 窗口传递页面参数
-
-       * @param {Object} option openWin窗口配置参数,参考api.openWin方法参数
-  ```
-
-  ```
+     /**
+        * 打开新窗口
+        * @param {String} name 打开窗口名及对应url，url与文件名对应
+        * @param {Object} params 窗口传递页面参数
+        * @param {Object} option openWin窗口配置参数,参考api.openWin方法参数
      */
-
      示例代码
-
-      openWin('page', { id: 1 },  {animation: {type: push}})
+     openWin('page', { id: 1 },  {animation: {type: push}})
   ```
 
 * closeWin\(string\)
 
   ```
     关闭窗口，string为关闭的窗口名，不传则默认关闭当前窗口
-
     示例代码
-
-    close Win\(\)
-
-    closeWin\('page1'\)
+    close Win()
+    closeWin('page1')
   ```
 
 * ajax\({params}\)
