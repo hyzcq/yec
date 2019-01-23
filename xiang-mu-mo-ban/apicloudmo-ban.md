@@ -102,7 +102,7 @@
     sendEvent('myEvent', {
         name:  '张三'
     })
-  
+
     //html页面b：
     addEvent('myEvent', function(value){
         console.log(JSON.stringify(value))   //b页面将收到 myEvent 事件,输出结果为{name: '张三'}
@@ -133,7 +133,7 @@
   ```js
     关闭窗口，string为关闭的窗口名，不传则默认关闭当前窗口
     示例代码
-    close Win()
+    closeWin()
     closeWin('page1')
   ```
 
