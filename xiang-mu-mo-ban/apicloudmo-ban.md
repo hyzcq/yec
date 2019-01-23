@@ -124,6 +124,10 @@
      openWin('page', { id: 1 },  {animation: {type: push}})
   ```
 
+* openFrame\(string, {params}, {option}\)
+
+        打开新的frame，使用方法及参数同openWin
+
 * closeWin\(string\)
 
   ```
