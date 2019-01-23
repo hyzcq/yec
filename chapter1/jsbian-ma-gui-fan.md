@@ -151,14 +151,6 @@ var x = 1;
  * @param {string} a - 参数a
  * @param {number} b=1 - 参数b默认值为1
  * @param {string} c=1 - 参数c有两种支持的取值
-<
-/br
->
-1—表示x
-<
-/br
->
-2—表示xx
  * @param {object} d - 参数d为一个对象
  * @param {string} d.e - 参数d的e属性
  * @param {string} d.f - 参数d的f属性
@@ -181,15 +173,7 @@ function foo(a, b, c, d, g, j) {
 var x = "test";
 
 // good
-var y = 'foo',
-    z = '
-<
-div id="test"
->
-<
-/div
->
-';
+var y = 'foo';
 ```
 
 ### 变量命名
@@ -240,9 +224,7 @@ function doSomethingWithItems(items) {
         i,
         len;
 
-    for (i = 0, len = items.length; i 
-<
- len; i++) {
+    for (i = 0, len = items.length; i <len; i++) {
         result += 10;
     }
 }
