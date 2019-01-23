@@ -67,13 +67,9 @@
    toast('网络错误')
 
    toast({
-
       msg: '网络错误',
-
       duration: 2000,
-
-       location: 'bottom'
-
+      location: 'bottom'
    });
   ```
 
@@ -85,9 +81,7 @@
     示例代码
 
     addEvent('online', function(value){
-
-             console.log(value)
-
+        console.log(value)
     })
   ```
 
