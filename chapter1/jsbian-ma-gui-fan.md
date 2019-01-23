@@ -8,7 +8,7 @@
 
 语句结束后需加分号
 
-```
+```js
 /* var declaration */
 var x = 1;
 
@@ -18,9 +18,7 @@ x++;
 /* do-while */
 do {
     x++;
-} while (x 
-<
- 10);
+} while (x < 10);
 ```
 
 ### 换行
@@ -39,7 +37,7 @@ do {
 
 * 变量赋值后
 
-```
+```js
 // not good
 var a = {
     b: 1
@@ -103,7 +101,7 @@ var a,
 
 可位于一个代码行的末尾，与代码间隔一个空格。
 
-```
+```js
 if (condition) {
     // if you made it here, then all security checks passed
     allowed();
@@ -126,7 +124,7 @@ var zhangsan = 'zhangsan'; // one space after code
 
 * 业务逻辑强相关的代码
 
-```
+```js
 /*
  * one space after '*'
  */
@@ -145,7 +143,7 @@ var x = 1;
 
 * 类
 
-```
+```js
 /**
  * 注释写明参数类型，是否可选，参数含义
  * @func
@@ -178,7 +176,7 @@ function foo(a, b, c, d, g, j) {
 
 最外层统一使用单引号。
 
-```
+```js
 // not good
 var x = "test";
 
@@ -210,7 +208,7 @@ div id="test"
 
 * jquery对象必须以'$'开头命名
 
-```
+```js
 var thisIsMyName;
 
 var goodID;
@@ -234,7 +232,7 @@ var $body = $('body');
 
 一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
 
-```
+```js
 function doSomethingWithItems(items) {
     // use one var
     var value = 10,
