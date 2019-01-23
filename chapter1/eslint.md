@@ -8,13 +8,17 @@ root: true,
 
 parserOptions: {
 
-    parser: 'babel-eslint'
+```
+parser: 'babel-eslint'
+```
 
 },
 
 env: {
 
-    browser: true,
+```
+browser: true,
+```
 
 },
 
@@ -28,7 +32,9 @@ extends: \['plugin:vue/essential'\],
 
 plugins: \[
 
-    'vue'
+```
+'vue'
+```
 
 \],
 
@@ -38,73 +44,51 @@ rules: {
 
 ```
 // allow debugger during development
-
-'no-debugger': process.env.NODE\_ENV === 'production' ? 2 : 'off',
+'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 'off',
 
 // tab 缩进
-
-'indent': \[2, 4\],
-
+'indent': [2, 4],
 'no-mixed-spaces-and-tabs': 2,
 
 // 使用单引号
-
-'quotes': \[2, 'single'\],
+'quotes': [2, 'single'],
 
 // 控制逗号前后的空格
-
-'comma-spacing': \[2, { 'before': false, 'after': true }\],
-
+'comma-spacing': [2, { 'before': false, 'after': true }],
 'key-spacing': 2, // 对象key之后，冒号前不允许有空格; value前需要有空格
-
 'keyword-spacing': 0, //要求在关键字之前、之后都至少有一个空格
-
-'no-multiple-empty-lines': \[2, {'max': 2}\], // 不能有多个空行,最多两行
-
+'no-multiple-empty-lines': [2, {'max': 2}], // 不能有多个空行,最多两行
 'no-trailing-spaces': 2, // 行尾不留空格
-
-'quote-props': \[2, 'consistent'\], //对象的属性名需要统一【 双引号、单引号、不加】三个选一
-
-'spaced-comment': \[1, 'always'\], // 注释后面//后需要增加空格
+'quote-props': [2, 'consistent'], //对象的属性名需要统一【 双引号、单引号、不加】三个选一
+'spaced-comment': [1, 'always'], // 注释后面//后需要增加空格
 
 // 强制一行的最大长度
-
-'max-len':\[1, 100\],
+'max-len':[1, 100],
 
 // 禁止不必要的分号
-
 'no-extra-semi': 2,
 
 // 禁止与负零进行比较
-
 'no-compare-neg-zero': 2,
 
 // 禁止在函数参数中出现重复名称的参数
-
 'no-dupe-args': 2,
-
-'vue/no-parsing-error': \[2, { 'x-invalid-end-tag': false }\],
+'vue/no-parsing-error': [2, {'x-invalid-end-tag': false}],
 
 // @fixable html 的结束标签必须符合规定
-
 // @off 有的标签不必严格符合规定，如 &lt;br&gt; 或 &lt;br/&gt; 都应该是合法的
-
 'vue/html-end-tags': 'off',
 
 // 计算属性禁止包含异步方法
-
 'vue/no-async-in-computed-properties': 2,
 
 // 禁止出现难以理解的 v-if 和 v-for
-
 'vue/no-confusing-v-for-v-if': 2,
 
 // 禁止出现重复的属性
-
 'vue/no-duplicate-attributes': 2,
 
 // 禁止覆盖保留字
-
 'vue/no-reserved-keys': 2
 ```
 
