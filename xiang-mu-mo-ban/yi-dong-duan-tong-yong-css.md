@@ -44,10 +44,12 @@ overflow-x: hidden;
 
 }
 
+/\* 定义rem\*/
+
 html{
 
 ```
-font-size: calc\(100vw / 7.5\);
+font-size: calc(100vw / 7.5);
 ```
 
 }
