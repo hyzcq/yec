@@ -8,9 +8,7 @@ npm install bat-cli -g
 
 bat init my-app  /\*\* 项目名称 \*\*/
 
-选择生成的项目类型
+选择生成的项目类型，下载配置对应的项目模板
 
 ![](/assets/bat-int.png)
-
-
 
