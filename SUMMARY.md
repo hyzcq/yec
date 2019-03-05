@@ -15,7 +15,7 @@
   * [js学习资源](jsxue-xi-zi-yuan.md)
 * [快速开发](xiang-mu-mo-ban.md)
   * [移动端通用css](xiang-mu-mo-ban/yi-dong-duan-tong-yong-css.md)
-  * [APICLOUD模板](xiang-mu-mo-ban/apicloudmo-ban.md)
+  * [APICLOUD快速开发](xiang-mu-mo-ban/apicloudmo-ban.md)
 
 ## 开发工具
 
