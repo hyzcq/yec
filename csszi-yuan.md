@@ -8,7 +8,7 @@
 
   * [Myth](http://hao.jobbole.com/myth/)：只用写纯CSS而不用担心浏览器加载缓慢。[官网](https://github.com/segmentio/myth)
 
-  * PCSS：一个用Python语言编写的CSS预处理器。[官网](https://github.com/senko/pcss)
+  * [PCSS](https://github.com/senko/pcss)：一个用Python语言编写的CSS预处理器。[官网](https://github.com/senko/pcss)
 
   * [PostCSS](http://hao.jobbole.com/postcss/)：通过JS插件来转换CSS。[PostCSS](https://github.com/postcss/postcss)
 
