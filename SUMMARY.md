@@ -13,7 +13,15 @@
   * [CSS资源](csszi-yuan.md)
   * [小程序资源](xiao-cheng-xu-zi-yuan.md)
   * [js学习资源](jsxue-xi-zi-yuan.md)
-* [项目常用模板及代码](xiang-mu-mo-ban.md)
+* [快速开发](xiang-mu-mo-ban.md)
   * [移动端通用css](xiang-mu-mo-ban/yi-dong-duan-tong-yong-css.md)
   * [APICLOUD模板](xiang-mu-mo-ban/apicloudmo-ban.md)
+
+## 开发工具
+
+* [常用编辑器及插件](kai-fa-gong-ju/chang-yong-bian-ji-qi-ji-cha-jian.md)
+* [CSS工具](kai-fa-gong-ju/cssgong-ju.md)
+* [前端开发常用Chrome插件](kai-fa-gong-ju/qian-duan-kai-fa-chang-yong-chrome-cha-jian.md)
+* [H5交互动画制作工具](kai-fa-gong-ju/h5jiao-hu-dong-hua-zhi-zuo-gong-ju.md)
+* [前端调试工具](kai-fa-gong-ju/qian-duan-diao-shi-gong-ju.md)
 
