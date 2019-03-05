@@ -14,7 +14,7 @@ img,iframe{border:0;}
 
 table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
 
-ol,ul{list-style:none outside none}
+ol,ul,li{list-style:none;outside:none;}
 
 em,strong,i{font-style:normal;font-weight:bold}
 
@@ -98,14 +98,6 @@ font-size: .28rem;
 touch-callout:none;
 
 box-sizing: border-box;
-```
-
-}
-
-li{
-
-```
-list-style: none;
 ```
 
 }

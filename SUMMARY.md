@@ -11,11 +11,11 @@
   * [工具篇](工具篇.md)
   * [vue资源](vuezi-yuan.md)
   * [CSS资源](csszi-yuan.md)
-  * [小程序资源](xiao-cheng-xu-zi-yuan.md)
-  * [js学习资源](jsxue-xi-zi-yuan.md)
+  * [js资源](jsxue-xi-zi-yuan.md)
 * [快速开发](xiang-mu-mo-ban.md)
   * [移动端通用css](xiang-mu-mo-ban/yi-dong-duan-tong-yong-css.md)
   * [APICLOUD快速开发](xiang-mu-mo-ban/apicloudmo-ban.md)
+  * [小程序快速开发](xiang-mu-mo-ban/xiao-cheng-xu-kuai-su-kai-fa.md)
 
 ## 开发工具
 
